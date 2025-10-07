@@ -183,7 +183,7 @@
     &copy; 2025 Iker Leandro Reséndiz · Midela Representaciones
   </footer>
 
-  <script>
+<script>
     // Animaciones suaves de entrada
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -192,18 +192,18 @@
     });
     document.querySelectorAll('section').forEach(sec => observer.observe(sec));
 
-  // Botón "Volver al Portafolio" — versión funcional
-  const volver = document.getElementById('volver');
-  volver.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (document.referrer && document.referrer.startsWith(window.location.origin)) {
-      window.history.back();
-    } else {
-      // Si no hay historial o viene directo
-      window.location.href = "../index.html";
-    }
-  });
+    // Botón de volver igual que Assignia: vuelve al portafolio anterior
+    const backBtn = document.getElementById('backBtn');
+    backBtn.addEventListener('click', () => {
+      if (document.referrer && document.referrer.startsWith(window.location.origin)) {
+        window.history.back();
+      } else {
+        // si por alguna razón no hay referrer, volver al index por seguridad
+        window.location.href = "/index.html";
+      }
+    });
   </script>
 </body>
 
 </html>
+
