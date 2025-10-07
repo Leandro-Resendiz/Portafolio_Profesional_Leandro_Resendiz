@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignia | Iker Leandro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #F5F6FA;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      margin: clamp(2rem, 6vw, 4rem) 1rem 2rem;
+      padding: 0 1rem;
+    }
+    header img {
+      max-width: 200px;
+      margin-bottom: 1rem;
+    }
+    header h1 { 
+      color: #00FFF0; 
+      font-size: clamp(1.8rem, 5vw, 3rem); 
+      margin: 0.5rem 0; 
+    }
+    header p { 
+      color: #C0F0F0; 
+      max-width: 700px; 
+      margin: 1rem auto 0; 
+      font-size: clamp(1rem, 3vw, 1.2rem); 
+    }
+
+    section {
+      max-width: 850px;
+      margin: 2rem auto;
+      background: rgba(255,255,255,0.05);
+      padding: 2rem clamp(1rem, 4vw, 3rem);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.7s ease;
+    }
+    section.visible { opacity: 1; transform: translateY(0); }
+
+    section h2 { 
+      text-align: center; 
+      color: #00FFF0; 
+      font-size: clamp(1.5rem, 4vw, 2rem); 
+      margin-bottom: 1rem; 
+    }
+    section p { 
+      line-height: 1.6; 
+      color: #D1F2F2; 
+      font-size: clamp(0.95rem, 3vw, 1.05rem); 
+    }
+
+.impacto {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem clamp(1rem, 4vw, 3rem);
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 4px solid #00FFF0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+/* Cuando entre en vista */
+.impacto.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    .ficha { 
+      background: rgba(255,255,255,0.03); 
+      padding: 1rem; 
+      border-radius: 8px; 
+      margin-top: 1rem; 
+      font-size: clamp(0.85rem, 3vw, 0.95rem); 
+      line-height: 1.5; 
+    }
+
+    .btn {
+      display: inline-block;
+      background: #FF6B35;
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 1rem 0.5rem 0;
+      transition: background 0.3s ease, transform 0.3s ease;
+      font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+    .btn:hover { background: #e85727; transform: translateY(-2px); }
+
+    .floating-shape { 
+      position: absolute; 
+      border-radius: 50%; 
+      background: rgba(0,255,240,0.08); 
+      filter: blur(60px); 
+      animation: float 20s ease-in-out infinite alternate; 
+    }
+    .floating-shape.one { width: 200px; height: 200px; top: 20%; left: -100px; animation-delay: 0s; }
+    .floating-shape.two { width: 150px; height: 150px; bottom: 15%; right: -80px; animation-delay: 5s; }
+    @keyframes float { 
+      0% { transform: translateY(0) translateX(0) rotate(0deg);}
+      100% { transform: translateY(-50px) translateX(50px) rotate(360deg);}
+    }
+
+    iframe.demo { 
+      width: 100%; 
+      height: 1200px; 
+      border: none; 
+      margin-top: 2rem; 
+      border-radius: 10px; 
+      box-shadow: 0 0 20px rgba(0,255,240,0.1); 
+    }
+
+    @media (max-width: 600px) {
+      .floating-shape.one, .floating-shape.two { display: none; }
+      iframe.demo { height: 900px; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #aaa;
+      background: #111;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="floating-shape one"></div>
+  <div class="floating-shape two"></div>
+
+  <header>
+    <img src="../image/logo-assignia-transparente.png" alt="Assignia Logo">
+    <p>Un sistema autónomo que conecta clientes, administración y técnicos de forma automática.</p>
+  </header>
+
+  <!-- DEMO INTERACTIVO -->
+  <section>
+    <h2>🎬 Demo funcional</h2>
+    <p>Interactúa directamente con Assignia: prueba la vista de Administrador o Técnico.</p>
+    <iframe class="demo" src="https://dapper-bubblegum-d1921b.netlify.app/dashboard" title="Demo Assignia"></iframe>
+    <div style="text-align:center;">
+      <a href="/Docs/Manual General de Usuario - Assignia.pdf" class="btn" target="_blank">Ver Manual PDF</a>
+    </div>
+  </section>
+
+  <!-- DOLOR DEL NEGOCIO -->
+  <section>
+    <h2>📌 Dolor de negocio</h2>
+    <p>Registros dispersos, técnicos que no reportan, clientes desinformados y una administración saturada de tareas manuales.</p>
+    <p>Esto provoca pérdidas económicas, desorganización y menor confianza del cliente.</p>  
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section>
+    <h2>💡 Cómo funciona Assignia</h2>
+    <p>
+      1️⃣ El cliente solicita servicio vía formulario.<br>
+      2️⃣ Se envía alerta automática a ventas y administración.<br>
+      3️⃣ El panel asigna técnico ideal.<br>
+      4️⃣ El técnico recibe enlace con datos y evidencia.<br>
+      5️⃣ El cliente monitorea el avance.<br>
+      6️⃣ El técnico cierra el servicio y sube fotos.<br>
+      7️⃣ Se genera PDF automático para administración y cliente.
+    </p>
+  </section>
+
+  <!-- IMPACTO -->
+  <section class="impacto">
+    <h2>🚀 Impacto real</h2>
+    <p>
+      ✔️ Cero pérdida de información<br>
+      ✔️ Supervisión en tiempo real<br>
+      ✔️ Clientes informados y satisfechos<br>
+      ✔️ Reducción de tareas repetitivas<br>
+      ✔️ Reportes PDF listos para auditoría
+    </p>
+  </section>
+
+  <!-- FICHA TÉCNICA -->
+  <section>
+    <h2>📂 Ficha técnica</h2>
+    <div class="ficha">
+      - Herramientas: Make, Notion/Airtable, HTML, JavaScript, API PDF<br>
+      - Roles: Cliente, Administrativo, Técnico<br>
+      - Integraciones: Notificaciones automáticas (correo y Telegram)<br>
+      - Tiempo de entrega: 14 días<br>
+      - Casos de uso: Instalaciones, mantenimientos, auditorías en campo
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section style="text-align: center;">
+    <a href="#" id="volver" class="btn">Volver al Portafolio</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Iker Leandro Reséndiz · Assignia
+  </footer>
+
+  <script>
+    // Efecto de aparición al hacer scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+
+    // Botón "Volver al Portafolio" inteligente
+    const ref = document.referrer;
+    const volver = document.getElementById('volver');
+    if (ref.includes("Tech")) volver.href = "../portafolio/Tech.html#proyectos";
+    else if (ref.includes("Creativo")) volver.href = "../portafolio/Creativo.html#proyectos";
+    else if (ref.includes("Admin")) volver.href = "../portafolio/Admin.html#proyectos";
+    else volver.href = "../index.html";
+  </script>
+</body>
+</html>

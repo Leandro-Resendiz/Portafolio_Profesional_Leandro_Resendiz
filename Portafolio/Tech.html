@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iker Leandro | Consultor TIC & Programador Web</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f5f6fa;
+    }
+    header {
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #00fff0;
+      text-shadow: 0 0 10px rgba(0,255,240,0.3);
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      color: #d1f2f2;
+    }
+    .btn {
+      background-color: #ff6b35;
+      color: white;
+      padding: 0.9rem 1.8rem;
+      border-radius: 10px;
+      margin-top: 1.2rem;
+      display: inline-block;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover { background-color: #e85727; transform: scale(1.05); }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: #00fff0;
+      text-align: center;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .card {
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      flex: 1 1 280px;
+      transition: 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,255,240,0.1); }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Iker Leandro Reséndiz Ávila</h1>
+    <p>Consultor en Automatización · Programador Web · Ingeniero en TIC</p>
+    <a href="Docs/CV-Tecnologia.pdf" class="btn" download>Descargar CV</a>
+    <a href="#contacto" class="btn">Contactar</a>
+  </header>
+
+  <section id="sobre-mi">
+    <h2>¿Quién soy?</h2>
+    <p>
+      Soy ingeniero en Tecnologías de la Información y Comunicaciones, 
+      con experiencia en automatización de procesos, integración de sistemas y 
+      desarrollo web funcional. Me especializo en convertir tareas manuales en 
+      flujos inteligentes usando Make, Zapier, Notion, Airtable y desarrollo en Python, 
+      HTML, CSS y JavaScript.
+    </p>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades Técnicas</h2>
+    <div class="grid">
+      <div class="card">🤖 Automatización: Make, Zapier, Airtable, Notion</div>
+      <div class="card">💻 Desarrollo Web: HTML, CSS, JavaScript, Django</div>
+      <div class="card">📊 Data & Reportes: Python, Excel avanzado, APIs</div>
+      <div class="card">🔐 Seguridad: Buenas prácticas en manejo de datos</div>
+    </div>
+  </section>
+
+
+  <section id="proyectos">
+  <h2>Proyectos Reales</h2>
+
+  <h3 style="color:#00fff0; text-align:center;">🔁 Automatización</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>Assignia</h3>
+      <p>Reportes PDF automáticos para auditoría y control de técnicos.</p>
+      <a href="/proyectos/Assignia.html" class="btn">Ver demo</a>
+    </div>
+    <div class="card">
+      <h3>Welcome AutoPilot</h3>
+      <p>Onboarding de clientes vía WhatsApp + Airtable.</p>
+      <a href="/proyectos/Welcome-Autopilot.html" class="btn">Ver demo</a>
+    </div>
+  </div>
+
+  <h3 style="color:#00fff0; text-align:center; margin-top:2rem;">💻 Desarrollo Web</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>Midela Representaciones</h3>
+      <p>Sitio web B2B con enfoque en claridad de productos.</p>
+      <a href="/proyectos/MidelaR.html" class="btn">Visitar</a>
+    </div>
+    <div class="card">
+      <h3>Generador de Contraseñas</h3>
+      <p>App Django para crear contraseñas seguras.</p>
+      <a href="https://ikerleandrore.pythonanywhere.com" target="_blank" class="btn">Ver app</a>
+    </div>
+  </div>
+
+  <h3 style="color:#00fff0; text-align:center; margin-top:2rem;">📊 Data & Scripts</h3>
+  <div class="grid">
+    <div class="card">
+      <h3>Smart Sync Hub</h3>
+      <p>Centralización de datos entre formularios, Notion y CRM.</p>
+      <a href="/proyectos/SmartSyncHub.html" class="btn">Ver demo</a>
+    </div>
+    <div class="card">
+      <h3>Scripts Python</h3>
+      <p>Scraping, automatización y utilidades en GitHub.</p>
+      <a href="https://github.com/Leandro-Resendiz?tab=repositories" target="_blank" class="btn">Ver GitHub</a>
+    </div>
+  </div>
+</section>
+
+  <section id="proceso">
+    <h2>Mi proceso de trabajo</h2>
+    <div class="grid">
+      <div class="card">🔍 1. Análisis de necesidades</div>
+      <div class="card">🧠 2. Diseño del flujo óptimo</div>
+      <div class="card">🤖 3. Desarrollo y pruebas</div>
+      <div class="card">🚀 4. Implementación final</div>
+    </div>
+  </section>
+
+  <section id="porque-yo">
+    <h2>¿Por qué elegirme?</h2>
+    <div class="grid">
+      <div class="card">⚡ Integro tecnología con visión de negocio</div>
+      <div class="card">🤝 Comunicación clara y soluciones prácticas</div>
+      <div class="card">🚀 Disponibilidad inmediata para proyectos o empleos</div>
+      <div class="card">🧠 Creatividad + lógica para resolver problemas</div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctame</h2>
+    <p style="text-align:center;">📩 Escríbeme a <a href="mailto:resendizikerleandro@gmail.com" style="color:#00fff0;">resendizikerleandro@gmail.com</a></p>
+    <p style="text-align:center;">💬 WhatsApp: <a href="https://wa.me/5215614423799" style="color:#00fff0;">5614423799</a></p>
+    <p style="text-align:center;">🌐 GitHub: <a href="https://github.com/Leandro-Resendiz" style="color:#00fff0;" target="_blank">Ver repositorios</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Iker Leandro Reséndiz · Consultoría TIC & Desarrollo Web</p>
+  </footer>
+</body>
+</html>

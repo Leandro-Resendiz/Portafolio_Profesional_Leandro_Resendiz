@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iker Leandro | Consultor Creativo en Automatización y Web</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #F5F6FA;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    /* --- EFECTO BRILLO + ENTRADA SUAVE --- */
+    header h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #00fff0, #ffffff, #00fff0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% auto;
+      animation: glow 5s linear infinite, fadeInDown 1.2s ease forwards;
+      opacity: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 1.2rem auto;
+      color: #E5E5E5;
+      animation: fadeInUp 1.4s ease forwards;
+      opacity: 0;
+      animation-delay: 0.6s;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #FF6B35, #FF1E56);
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 12px;
+      margin-top: 1.2rem;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1.6s ease forwards;
+      opacity: 0;
+      animation-delay: 1.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 18px rgba(255,110,70,0.6);
+    }
+
+    /* --- KEYFRAMES --- */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes glow {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    /* --- SECCIONES --- */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: #00FFF0;
+      text-shadow: 0 0 8px rgba(0,255,240,0.4);
+      text-align: center;
+      opacity: 0;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    section p {
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      animation-delay: 0.3s;
+    }
+
+    /* --- CARDS --- */
+    .servicio, .proyecto {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      margin: 1rem;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    }
+    .servicio:hover, .proyecto:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(0,255,240,0.25);
+      background: rgba(255,255,255,0.09);
+    }
+
+    .proyectos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .cta {
+      text-align: center;
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      padding: 3rem;
+      margin: 4rem auto;
+      max-width: 900px;
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+      animation-delay: 0.5s;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #111;
+      color: #aaa;
+    }
+
+    /* Cubos flotantes */
+    .cubes { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+    .cube {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(0, 255, 240, 0.2);
+      animation: float 14s linear infinite;
+    }
+    .cube:nth-child(1) { top: 80%; left: 10%; animation-delay: 0s; }
+    .cube:nth-child(2) { top: 60%; left: 25%; animation-delay: 2s; }
+    .cube:nth-child(3) { top: 90%; left: 40%; animation-delay: 4s; }
+    .cube:nth-child(4) { top: 70%; left: 65%; animation-delay: 6s; }
+    .cube:nth-child(5) { top: 85%; left: 80%; animation-delay: 8s; }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cubes">
+    <div class="cube"></div><div class="cube"></div><div class="cube"></div>
+    <div class="cube"></div><div class="cube"></div>
+  </div>
+
+  <header>
+    <h1>Transformo procesos en experiencias digitales</h1>
+    <p>Consultor creativo en automatización y desarrollo web. Hago que tu negocio funcione más rápido, más simple y con más impacto.</p>
+    <a href="https://wa.me/5215614423799" class="btn">Hablemos en WhatsApp</a>
+  </header>
+
+  <section id="sobre-mi">
+    <h2>¿Quién soy?</h2>
+    <p>
+      Soy <strong>Iker Leandro Reséndiz</strong>, ingeniero en TIC con pasión por la creatividad y la eficiencia. 
+      Combino tecnología, storytelling y diseño para que tu negocio no solo trabaje mejor, sino que luzca inolvidable.
+    </p>
+  </section>
+
+  <section id="servicios">
+    <h2>¿Cómo puedo ayudarte?</h2>
+    <div class="servicio">🔁 <strong>Automatización con estilo</strong><br/>Conecto herramientas como Make, Zapier y Notion para liberar tu tiempo.</div>
+    <div class="servicio">💻 <strong>Webs que venden</strong><br/>Diseño páginas que no solo se ven bien, sino que convierten visitas en clientes.</div>
+    <div class="servicio">🎨 <strong>Contenido creativo</strong><br/>Historias digitales que atrapan, desde un post hasta una landing page.</div>
+  </section>
+
+  <section id="proyectos">
+  <h2>Proyectos con impacto</h2>
+  <div class="proyectos-grid">
+
+    <div class="proyecto">
+      <h3>⚙️ Assignia</h3>
+      <p>Automatización total en gestión técnica, con generación automática de reportes PDF y panel de seguimiento.</p>
+      <a href="/proyectos/Assignia.html" class="btn">Ver proyecto</a>
+    </div>
+
+    <div class="proyecto">
+      <h3>🤖 Smart Sync Hub</h3>
+      <p>Sincronización avanzada de formularios, bases de datos y correos automáticos con Make y Notion.</p>
+      <a href="/proyectos/SmartSyncHub.html" class="btn">Ver proyecto</a>
+    </div>
+
+    <div class="proyecto">
+      <h3>💬 Welcome AutoPilot</h3>
+      <p>Centralización de datos administrativos en Notion y CRM para evitar duplicados.</p>
+      <a href="/proyectos/Welcome-Autopilot.html" class="btn">Ver proyecto</a>
+    </div>
+
+    <div class="proyecto">
+      <h3>🏭 Midela Representaciones</h3>
+      <p>Sitio web B2B con enfoque en claridad de producto y contacto comercial.</p>
+      <a href="/proyectos/MidelaR.html" class="btn">Ver proyecto</a>
+    </div>
+
+     <div class="proyecto">
+      <h3>Generador de Contraseñas</h3>
+      <p>App Django desplegada en PythonAnywhere para generación de contraseñas seguras.</p>
+      <a href="https://ikerleandrore.pythonanywhere.com" class="btn">Ver proyecto</a>
+    </div>
+
+    <div class="proyecto">
+      <h3>💡 Portafolio Futurista</h3>
+      <p>Proyectos experimentales y animaciones (sección creativa, no laboral).</p>
+      <a href="/proyectos/PortafolioFuturista.html" class="btn">Ver proyecto</a>
+    </div>
+
+    <div class="proyecto">
+      <h3>Scripts Python (GitHub)</h3>
+      <p>Automatización, scraping y utilidades en repositorios públicos.</p>
+      <a href="https://github.com/Leandro-Resendiz?tab=repositories" class="btn">Ver proyecto</a>
+    </div>
+
+  </div>
+</section>
+
+  <section id="porque-yo">
+    <h2>¿Por qué yo?</h2>
+    <div class="servicio">🚀 <strong>Experiencias que se recuerdan</strong><br/>Tu cliente no solo recibe un servicio, vive una experiencia digital.</div>
+    <div class="servicio">🤝 <strong>Empatía + estrategia</strong><br/>Escucho, entiendo y convierto tus ideas en procesos creativos.</div>
+    <div class="servicio">⚡ <strong>Impacto inmediato</strong><br/>Mis soluciones se notan desde el primer día.</div>
+  </section>
+
+  <section class="cta">
+    <h2>Disponible esta semana para nuevos proyectos</h2>
+    <p>¿Quieres un negocio más ágil, atractivo y digital? Es el momento de actuar.</p>
+    <a href="mailto:resendizikerleandro@gmail.com" class="btn">Agenda una llamada</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Iker Leandro Reséndiz · Consultor Creativo</p>
+  </footer>
+</body>
+</html>

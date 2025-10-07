@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iker Leandro | Portafolios Profesionales</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #F5F6FA;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #00FFF0;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #C0F0F0;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 3rem 2rem;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,255,240,0.2);
+    }
+    .card h2 {
+      font-size: 1.4rem;
+      color: #00FFF0;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: #FF6B35;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .btn:hover {
+      background: #e85727;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      background: #111;
+      color: #aaa;
+    }
+    footer a {
+      color: #00FFF0;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portafolios de Iker Leandro</h1>
+    <p>Elige la versión que se adapta a lo que buscas: administración, tecnología o creatividad.</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Administración</h2>
+      <p>Apoyo administrativo con un plus en automatización y gestión eficiente.</p>
+      <a href="/Portafolio/Admin.html" class="btn">Ver Portafolio</a>
+    </div>
+    <div class="card">
+      <h2>Consultor Tech</h2>
+      <p>Soluciones digitales, automatización y desarrollo web con enfoque estratégico.</p>
+      <a href="/Portafolio/Tech.html" class="btn">Ver Portafolio</a>
+    </div>
+    <div class="card">
+      <h2>Creativo</h2>
+      <p>Diseños persuasivos, storytelling visual y proyectos que generan impacto.</p>
+      <a href="/Portafolio/Creativo.html" class="btn">Ver Portafolio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>📧 <a href="mailto:resendizikerleandro@gmail.com">resendizikerleandro@gmail.com</a> | 📞 <a href="tel:+525614423799">+52 56 1442 3799</a></p>
+    <p>&copy; 2025 Iker Leandro Reséndiz</p>
+  </footer>
+</body>
+</html>
