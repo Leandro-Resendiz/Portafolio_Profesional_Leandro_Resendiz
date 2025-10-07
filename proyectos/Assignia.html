@@ -215,22 +215,27 @@
     &copy; 2025 Iker Leandro Reséndiz · Assignia
   </footer>
 
-  <script>
-    // Efecto de aparición al hacer scroll
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
+ <script>
+  // Efecto de aparición al hacer scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
-    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+  });
+  document.querySelectorAll('section').forEach(sec => observer.observe(sec));
 
-    // Botón "Volver al Portafolio" inteligente
-    const ref = document.referrer;
-    const volver = document.getElementById('volver');
-    if (ref.includes("Tech")) volver.href = "../portafolio/Tech.html#proyectos";
-    else if (ref.includes("Creativo")) volver.href = "../portafolio/Creativo.html#proyectos";
-    else if (ref.includes("Admin")) volver.href = "../portafolio/Admin.html#proyectos";
-    else volver.href = "../index.html";
-  </script>
+  // Botón "Volver al Portafolio" — versión funcional
+  const volver = document.getElementById('volver');
+  volver.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (document.referrer && document.referrer.startsWith(window.location.origin)) {
+      window.history.back();
+    } else {
+      // Si no hay historial o viene directo
+      window.location.href = "../index.html";
+    }
+  });
+</script>
 </body>
+
 </html>
