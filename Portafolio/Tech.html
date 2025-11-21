@@ -6,278 +6,259 @@
   <title>Iker Leandro | Consultor TIC & Programador Web</title>
   <link rel="icon" href="/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    /* Reset ligero */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* Layout general */
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: #f5f6fa;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height: 1.45;
+      overflow-x: hidden;
     }
 
+    /* ANIMACIONES */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade {
+      animation: fadeIn 1s ease forwards;
+    }
+
+    /* TITULOS */
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #00fff0;
+      margin-bottom: 1.8rem;
+      position: relative;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 0 8px rgba(0,255,240,0.4);
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #00fff0, transparent);
+      animation: glowline 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes glowline {
+      from { box-shadow: 0 0 8px rgba(0,255,240,0.4); }
+      to { box-shadow: 0 0 16px rgba(0,255,240,1); }
+    }
+
+    /* HEADER */
     header {
       text-align: center;
-      padding: 5rem 1.5rem;
+      padding: 5rem 2rem;
+      animation: fadeIn 1.2s ease;
     }
+
     header h1 {
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       color: #00fff0;
-      margin-bottom: 0.4rem;
+      text-shadow: 0 0 15px rgba(0,255,240,0.5);
     }
+
     header p {
-      font-size: 1.05rem;
-      color: #cfeff0;
-      max-width: 820px;
-      margin: 0.6rem auto 1.2rem;
-    }
-    header .actions {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      color: #d1f2f2;
       margin-top: 1rem;
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
     }
+
     .btn {
       background-color: #ff6b35;
       color: white;
-      padding: 0.7rem 1.2rem;
+      padding: 0.9rem 1.8rem;
       border-radius: 10px;
+      margin-top: 1.2rem;
+      display: inline-block;
       text-decoration: none;
+      transition: 0.3s;
       font-weight: 600;
-      display:inline-block;
-      transition: transform 0.12s ease;
     }
-    .btn:hover { transform: translateY(-3px); }
+    .btn:hover {
+      background-color: #e85727;
+      transform: scale(1.05);
+    }
 
-    /* Secciones */
+    /* SECCIONES */
     section {
-      padding: 3.5rem 1.5rem;
+      padding: 4rem 2rem;
       max-width: 1100px;
-      margin: 0 auto;
-    }
-    section h2 {
-      font-size: 1.9rem;
-      color: #00fff0;
-      text-align: center;
-      margin-bottom: 1.2rem;
-    }
-    .lead {
-      color: #d1f2f2;
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto 1.6rem;
-      font-size: 1.02rem;
+      margin: auto;
     }
 
-    /* Grid de tarjetas */
+    /* GRID */
     .grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 2rem;
       justify-content: center;
     }
+
+    /* CARDS */
     .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 12px;
-      padding: 20px;
-      width: 320px;
-      min-height: 220px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .card h3 {
-      color: #00fff0;
-      margin-bottom: 8px;
-      font-size: 1.1rem;
-    }
-    .card p {
-      color: #d7f6f5;
-      font-size: 0.95rem;
-      margin-bottom: 12px;
-    }
-    .card .small {
-      color: #bfeeee;
-      font-size: 0.88rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      flex: 1 1 280px;
+      text-align: center;
+      transition: 0.4s;
+      backdrop-filter: blur(4px);
     }
 
-    /* Video container para proyecto principal */
-    .video-wrap {
-      width: 100%;
-      max-width: 900px;
-      margin: 14px auto 0;
-      padding-bottom: 56.25%;
-      position: relative;
-      height: 0;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,255,240,0.15);
+      border-color: rgba(0,255,240,0.35);
     }
-    .video-wrap iframe {
-      position: absolute;
-      top:0; left:0; width:100%; height:100%; border:0;
-    }
-
-    /* Secciones tipo grid grande (proyectos) */
-    .projects-grid {
-      display: grid;
-      gap: 18px;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      align-items: start;
-    }
-    .project-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 12px;
-      padding: 18px;
-    }
-    .project-card h4 { color: #00fff0; margin-bottom: 8px; }
-    .project-card p { color: #d4f2f2; font-size: 0.95rem; margin-bottom: 10px; }
 
     footer {
       text-align: center;
-      padding: 28px 12px;
-      color: #bfcfd0;
-      font-size: 0.95rem;
-      border-top: 1px solid rgba(255,255,255,0.03);
-      margin-top: 30px;
-      background: linear-gradient(to top, rgba(0,0,0,0.12), transparent);
-    }
-
-    /* Responsive */
-    @media (max-width: 720px) {
-      header { padding: 3rem 1rem; }
-      .card { width: 100%; min-height: auto; }
-      .video-wrap { height: auto; padding-bottom: 56.25%; }
+      padding: 2rem;
+      background: #111;
+      color: #888;
+      margin-top: 3rem;
     }
   </style>
 </head>
+
 <body>
 
+  <!-- ================= HEADER ================= -->
   <header>
-    <h1>Iker Leandro Reséndiz Ávila</h1>
-    <p>Consultor en Automatización · Programador Web · Integración de Workflows</p>
-    <div class="actions">
-      <a class="btn" href="/Docs/Iker_Leandro_Resendiz_CV_Tech_2025.pdf" download>Descargar CV</a>
-      <a class="btn" href="#contacto">Contactar</a>
-    </div>
+    <h1>Iker Leandro Reséndiz Avila</h1>
+    <p>Consultor en Automatización · Programador Web · Ingeniero en TIC</p>
+
+    <a href="/Docs/Iker_Leandro_Resendiz_CV_Tech_2025.pdf" class="btn" download>Descargar CV</a>
+    <a href="#contacto" class="btn">Contactar</a>
   </header>
 
-  <section id="sobre-mi">
+  <!-- ================= SOBRE MI ================= -->
+  <section class="fade" id="sobre-mi">
     <h2>¿Quién soy?</h2>
-    <p class="lead">Ingeniero en TIC con experiencia en automatización de procesos y desarrollo web funcional. Diseño flujos que conectan formularios, bases y notificaciones para eliminar trabajo manual y mejorar la respuesta al cliente.</p>
+    <p>
+      Soy ingeniero en Tecnologías de la Información y Comunicaciones,
+      especializado en automatización, integración de datos y creación de soluciones digitales
+      que reducen tiempo, errores y costos.
+    </p>
   </section>
 
-  <section id="habilidades">
+  <!-- ================= HABILIDADES ================= -->
+  <section class="fade" id="habilidades">
     <h2>Habilidades Técnicas</h2>
-    <div class="grid" style="max-width:900px;margin:18px auto 0;">
-      <div class="card">
-        <div>
-          <h3>🤖 Automatización</h3>
-          <p class="small">Make, Zapier, Airtable, Notion, Google Workspace</p>
-        </div>
-        <div class="small">Diseño y prueba de flujos, webhooks y plantillas de correo.</div>
-      </div>
 
-      <div class="card">
-        <div>
-          <h3>💻 Desarrollo Web</h3>
-          <p class="small">HTML, CSS, JavaScript. Integración de formularios y front simple.</p>
-        </div>
-        <div class="small">Construcción de demos y landing funcionales.</div>
-      </div>
-
-      <div class="card">
-        <div>
-          <h3>📊 Data & Scripts</h3>
-          <p class="small">Python básico, Excel avanzado, APIs REST, JSON.</p>
-        </div>
-        <div class="small">Generación de reportes y sincronización de datos.</div>
-      </div>
-
-      <div class="card">
-        <div>
-          <h3>🔧 Soporte & Operación</h3>
-          <p class="small">Mantenimiento PC, redes básicas, documentación técnica.</p>
-        </div>
-        <div class="small">Soporte operativo y optimización de procesos.</div>
-      </div>
+    <div class="grid">
+      <div class="card">🤖 Automatización: Make, Zapier, Airtable, Notion</div>
+      <div class="card">💻 Desarrollo Web: HTML, CSS, JavaScript, Django</div>
+      <div class="card">📊 Data: Python, APIs, Excel Avanzado</div>
+      <div class="card">🔐 Seguridad: Buenas prácticas y manejo de datos</div>
     </div>
   </section>
 
-  <section id="proyectos">
+  <!-- ================= PROYECTOS ================= -->
+  <section class="fade" id="proyectos">
     <h2>Proyectos Reales</h2>
 
-    <!-- AutoMailer Pro (proyecto destacado con video) -->
-    <div style="max-width:900px; margin: 0 auto 22px; text-align:center;">
-      <div class="project-card" style="padding:18px;">
-        <h4>AutoMailer Pro — Sistema de Correos Automatizados (2025)</h4>
-        <p>Flujo integrado con Make + Airtable + HTML/JS que captura leads desde un formulario, registra la información y envía correos personalizados de forma inmediata. Incluye historial centralizado y notificaciones internas para el equipo.</p>
-        <p class="small"><strong>Impacto:</strong> Reducción del 80% en tareas repetitivas relacionadas con envíos manuales.</p>
+    <h3 style="color:#00fff0; text-align:center;">🔁 Automatización</h3>
 
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/_b-Si4Yy7a0" title="AutoMailer Pro" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="grid">
+
+      <!-- AutoMailer Pro -->
+      <div class="card" style="border: 1px solid rgba(0,255,240,0.25);">
+        <h3 style="color:#00fff0;">AutoMailer Pro</h3>
+        <p>
+          Sistema automatizado que genera correos personalizados tras el llenado de formularios.
+        </p>
+
+        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; margin: 1rem 0;">
+          <iframe 
+            src="https://www.youtube.com/embed/_b-Si4Yy7a0"
+            frameborder="0"
+            allowfullscreen
+            style="position:absolute; top:0; left:0; width:100%; height:100%;">
+          </iframe>
         </div>
 
-        <div style="margin-top:12px; display:flex; gap:10px; justify-content:center;">
-          <a class="btn" href="/proyectos/AutoMailer-Pro.html">Ver demo</a>
-          <a class="btn" href="https://porta.folio245.com" target="_blank">Ver portafolio</a>
-        </div>
+        <a href="/proyectos/AutoMailer-Pro.html" class="btn">Ver Demo</a>
+      </div>
+
+      <!-- Otros proyectos -->
+      <div class="card">
+        <h3>Assignia</h3>
+        <p>Generador de reportes PDF automáticos.</p>
+        <a href="/proyectos/Assignia.html" class="btn">Ver demo</a>
+      </div>
+
+      <div class="card">
+        <h3>Welcome AutoPilot</h3>
+        <p>Onboarding automático vía WhatsApp + Airtable.</p>
+        <a href="/proyectos/Welcome-Autopilot.html" class="btn">Ver demo</a>
+      </div>
+
+    </div>
+
+    <h3 style="color:#00fff0; text-align:center; margin-top:2rem;">💻 Desarrollo Web</h3>
+    <div class="grid">
+      <div class="card">
+        <h3>Midela Representaciones</h3>
+        <p>Sitio web B2B con enfoque en claridad.</p>
+        <a href="/proyectos/MidelaR.html" class="btn">Visitar</a>
+      </div>
+
+      <div class="card">
+        <h3>Generador de Contraseñas</h3>
+        <p>App Django para crear contraseñas seguras.</p>
+        <a href="https://ikerleandrore.pythonanywhere.com" target="_blank" class="btn">Ver app</a>
       </div>
     </div>
 
-    <!-- Grid de otros proyectos -->
-    <div class="projects-grid" style="margin-top: 14px;">
-      <div class="project-card">
-        <h4>Assignia — Reportes PDF Automáticos (2025)</h4>
-        <p>Sistema que genera reportes PDF de técnicos y auditorías automáticamente, con envío por correo y almacenamiento en base de datos.</p>
-        <p class="small"><strong>Impacto:</strong> Reduce el tiempo de entrega de reportes de 25 min a 4 min.</p>
-        <div style="margin-top:10px;">
-          <a class="btn" href="/proyectos/Assignia.html">Ver demo</a>
-        </div>
+    <h3 style="color:#00fff0; text-align:center; margin-top:2rem;">📊 Data & Scripts</h3>
+    <div class="grid">
+      <div class="card">
+        <h3>Smart Sync Hub</h3>
+        <p>Centralización inteligente de datos.</p>
+        <a href="/proyectos/SmartSyncHub.html" class="btn">Ver demo</a>
       </div>
 
-      <div class="project-card">
-        <h4>Welcome AutoPilot — Onboarding por WhatsApp (2025)</h4>
-        <p>Onboarding automatizado que registra leads en Airtable, notifica al equipo por WhatsApp y envía mensajes de bienvenida al cliente.</p>
-        <p class="small"><strong>Impacto:</strong> Aumenta 60% la rapidez de respuesta a nuevos clientes.</p>
-        <div style="margin-top:10px;">
-          <a class="btn" href="/proyectos/Welcome-Autopilot.html">Ver demo</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h4>Smart Sync Hub — Sincronización Multiplataforma (2025)</h4>
-        <p>Conexión entre formularios, Notion y Google Sheets con envíos de correo programados y respaldo de datos automático.</p>
-        <p class="small"><strong>Impacto:</strong> Evita duplicados, errores y pérdidas de información.</p>
-        <div style="margin-top:10px;">
-          <a class="btn" href="/proyectos/SmartSyncHub.html">Ver demo</a>
-        </div>
+      <div class="card">
+        <h3>Scripts en Python</h3>
+        <p>Scraping, automatización y utilidades.</p>
+        <a href="https://github.com/Leandro-Resendiz" class="btn" target="_blank">GitHub</a>
       </div>
     </div>
+
   </section>
 
-  <section id="proceso">
-    <h2>Mi proceso de trabajo</h2>
-    <div class="lead" style="max-width:880px; margin:12px auto 0;">
-      1. Análisis de necesidades — 2. Diseño del flujo óptimo — 3. Desarrollo y pruebas — 4. Implementación.
-    </div>
-  </section>
-
-  <section id="contacto">
+  <!-- ================= CONTACTO ================= -->
+  <section class="fade" id="contacto">
     <h2>Contáctame</h2>
-    <p class="lead">📩 <a href="mailto:ikerleandrore@gmail.com" style="color:#00fff0; text-decoration:none;">ikerleandrore@gmail.com</a> &nbsp; · &nbsp; 💬 <a href="https://wa.me/5215614423799" style="color:#00fff0; text-decoration:none;">5614423799</a></p>
-    <p style="text-align:center; color:#cfeff0; margin-top:8px;">GitHub: <a href="https://github.com/Leandro-Resendiz" target="_blank" style="color:#00fff0; text-decoration:none;">github.com/Leandro-Resendiz</a></p>
+    <p>📩 <a href="mailto:ikerleandrore@gmail.com" style="color:#00fff0;">ikerleandrore@gmail.com</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/5215614423799" style="color:#00fff0;">5614423799</a></p>
+    <p>🌐 GitHub: <a href="https://github.com/Leandro-Resendiz" target="_blank" style="color:#00fff0;">Repositorios</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Iker Leandro Reséndiz · Consultoría TIC & Desarrollo Web · <span style="color:#00fff0;">porta.folio245.com</span>
+    <p>&copy; 2025 Iker Leandro Reséndiz · Consultoría TIC & Desarrollo Web</p>
   </footer>
 
 </body>
