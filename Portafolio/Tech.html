@@ -76,145 +76,207 @@
   </style>
 </head>
 <body>
+
+  <div class="floating-shape one"></div>
+  <div class="floating-shape two"></div>
+
   <header>
-    <h1>Iker Leandro Resendiz Avila</h1>
-    <p>Consultor en Automatización · Programador Web · Ingeniero en TIC</p>
-    <a href="/Docs/Iker_Leandro_Resendiz_CV_Tech_2025.pdf" class="btn" download>Descargar CV</a> &nbsp;
-    &nbsp;<a href="#contacto" class="btn">Contactar</a>
+    <img src="../image/logo-assignia-transparente.png" alt="Assignia Logo">
+    <p>Un sistema autónomo que conecta clientes, administración y técnicos de forma automática.</p>
   </header>
 
-  <section id="sobre-mi">
-    <h2>¿Quién soy?</h2>
+  <!-- Introducción -->
+  <section>
+    <h2>📌 Introducción</h2>
     <p>
-      Soy ingeniero en Tecnologías de la Información y Comunicaciones, 
-      con experiencia en automatización de procesos, integración de sistemas y 
-      desarrollo web funcional. Me especializo en convertir tareas manuales en 
-      flujos inteligentes usando Make, Zapier, Notion, Airtable y desarrollo en Python, 
-      HTML, CSS y JavaScript.
+      Assignia es un sistema de gestión de servicios diseñado para optimizar la comunicación entre clientes, administradores y técnicos, asegurando procesos claros, tiempos de respuesta rápidos y evidencia documentada de cada servicio realizado.
+    </p>
+    <p>
+      Creado usando Airtable, Make, HTML, CSS y JavaScript, su objetivo principal es automatizar el seguimiento del servicio desde que el cliente lo solicita hasta la generación del reporte final.
+    </p>  
+  </section>
+
+  <!-- Problema Detectado -->
+  <section>
+    <h2>💡 Problema Detectado</h2>
+    <p>
+      Las empresas de servicios suelen enfrentar tres problemas críticos:
+      <br><br>
+      1️⃣ Demoras en la atención al cliente.<br>
+      2️⃣ Falta de comunicación entre administrador y técnico.<br>
+      3️⃣ Evidencia incompleta o perdida.<br><br>
+      Esto provoca costos extras, clientes inconformes y baja eficiencia operativa.
     </p>
   </section>
 
-  <section id="habilidades">
-    <h2>Habilidades Técnicas</h2>
-    <div class="grid">
-      <div class="card">🤖 Automatización: Make, Zapier, Airtable, Notion</div>
-      <div class="card">💻 Desarrollo Web: HTML, CSS, JavaScript, Django</div>
-      <div class="card">📊 Data & Reportes: Python, Excel avanzado, APIs</div>
-      <div class="card">🔐 Seguridad: Buenas prácticas en manejo de datos</div>
+  <!-- Solución -->
+  <section class="impacto">
+    <h2>🚀 La Solución: Assignia</h2>
+    <p>
+      Desarrollé un sistema que conecta<br>
+      <b>formulario → base de datos → notificaciones → dashboard → técnicos → cliente</b><br><br>
+      Todo sin intervención manual.  
+      <br><br>
+      El flujo completo queda automatizado, reduciendo errores y acelerando la atención.
+    </p>
+  </section>
+
+  <!-- Funcionalidades Principales -->
+  <section>
+    <h2>🔧 Funcionalidades Principales</h2>
+    <div class="ficha">
+      <b>1. Alta de Administradores y Técnicos</b><br><br>
+      • Registro desde QR<br>
+      • Captura de nombre y rol<br>
+      • Sincronización automática al dashboard<br>
+      • Habilita notificaciones por Telegram<br>
+      <i>Impacto: equipo organizado desde el primer minuto.</i><br><br>
+
+      <b>2. Registro del Cliente</b><br><br>
+      • Nombre, teléfono, correo, dirección, tipo de servicio y problema<br>
+      <i>Resultado: cada cliente genera un caso automatizado en la base.</i><br><br>
+
+      <b>3. Notificación inmediata al Administrador</b><br><br>
+      Se envía a Telegram:<br>
+      • Datos del cliente<br>
+      • Tipo de servicio<br>
+      • Detalles del problema<br>
+      <i>Beneficio: atención casi inmediata.</i><br><br>
+
+      <b>4. Asignación de Técnico desde Dashboard</b><br><br>
+      • Selección del técnico<br>
+      • Instrucciones internas<br>
+      • Guardado y cambio automático de estatus<br><br>
+
+      <b>5. Notificación al Técnico</b><br><br>
+      El técnico recibe:<br>
+      • Mensaje en Telegram<br>
+      • Datos del cliente<br>
+      • Tipo de servicio<br>
+      • Instrucciones<br>
+      • Link para subir evidencias<br><br>
+
+      <b>6. Panel del Técnico + Evidencias</b><br><br>
+      • Registrar actividades<br>
+      • Subir fotos<br>
+      • Confirmar finalización<br>
+      <i>Resultado: el servicio pasa a “Finalizado”.</i><br><br>
+
+      <b>7. Actualización en Tiempo Real para el Cliente</b><br><br>
+      • Estatus<br>
+      • Técnico asignado<br>
+      • Evidencias enviadas<br>
+      <i>Todo cambia dinámicamente.</i><br><br>
+
+      <b>8. Generación de Reporte en PDF</b><br><br>
+      • Datos del cliente<br>
+      • Actividades del técnico<br>
+      • Evidencias fotográficas<br>
+      • Fecha y hora<br>
+      <i>Beneficio: documentación profesional.</i>
     </div>
   </section>
 
+  <!-- Arquitectura Técnica -->
+  <section>
+    <h2>🏗️ Arquitectura Técnica</h2>
+    <p>
+      • <b>Frontend:</b> HTML, CSS, JS<br>
+      • <b>Base de datos:</b> Airtable<br>
+      • <b>Automatización:</b> Make<br>
+      • <b>Mensajería:</b> Telegram Bots<br>
+      • <b>Reportería:</b> PDF Maker integrado<br>
+    </p>
+  </section>
 
-  <section id="proyectos">
-  <h2>Proyectos Reales</h2>
+  <!-- Impacto -->
+  <section>
+    <h2>📊 Impacto del Sistema</h2>
+    <p>
+      • Reducción del tiempo de asignación: <b>de 20 minutos a segundos</b><br>
+      • Eliminación de registros manuales<br>
+      • Comunicación automática y ordenada<br>
+      • Evidencia centralizada<br>
+      • Transparencia total para el cliente<br>
+    </p>
+  </section>
 
-  <h3 style="color:#00fff0; text-align:center;">🔁 Automatización</h3>
-  <div class="grid">
-<!-- Proyecto Estrella: AutoMailer Pro -->
-<div class="card" style="border: 1px solid rgba(0,255,240,0.2);">
-  <h3 style="color:#00fff0;">AutoMailer Pro</h3>
-  <p>
-    Sistema automatizado que envía correos personalizados tras el llenado de formularios, 
-    integrando Make + Airtable + HTML/JS. Diseñado para ahorrar tiempo, reducir errores y 
-    optimizar la comunicación con clientes en procesos de registro, ventas u onboarding.
-  </p>
-
-  <!-- Video responsivo -->
-  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; margin: 1rem 0;">
-    <iframe 
-      src="https://www.youtube.com/embed/_b-Si4Yy7a0" 
-      frameborder="0" 
-      allowfullscreen 
-      style="position:absolute; top:0; left:0; width:100%; height:100%;">
-    </iframe>
-  </div>
-
-  <a href="/proyectos/AutoMailer-Pro.html" class="btn">Ver Demo</a>
-</div>
-    <div class="card">
-      <h3>Assignia</h3>
-      <p>Reportes PDF automáticos para auditoría y control de técnicos.</br></br></p> 
-      <!-- Video responsivo -->
-      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; margin: 1rem 0;">
-      <iframe 
-      src="https://www.youtube.com/embed/_b-Si4Yy7a0" 
-      frameborder="0" 
-      allowfullscreen 
-      style="position:absolute; top:0; left:0; width:100%; height:100%;">
+  <!-- Video -->
+  <section class="video-assignia">
+    <h2>🎬 Demostración en Video</h2>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/_b-Si4Yy7a0"
+        title="Video Assignia"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
       </iframe>
     </div>
+  </section>
 
-      <a href="/proyectos/Assignia.html" class="btn">Ver demo</a>
-    </div>
-    <div class="card">
-      <h3>Welcome AutoPilot</h3>
-      <p>Onboarding de clientes vía WhatsApp + Airtable.</p>
-      <a href="/proyectos/Welcome-Autopilot.html" class="btn">Ver demo</a>
-    </div>
-  </div>
+  <!-- Rol -->
+  <section>
+    <h2>🧩 Rol que desempeñé</h2>
+    <p>
+      • Diseño del flujo completo<br>
+      • Desarrollo del dashboard<br>
+      • Integración con Airtable<br>
+      • Automatización con Make<br>
+      • Frontend de formularios<br>
+      • Configuración de bots en Telegram<br>
+      • Documentación del proceso<br>
+    </p>
+  </section>
 
-  <h3 style="color:#00fff0; text-align:center; margin-top:2rem;">💻 Desarrollo Web</h3>
-  <div class="grid">
-    <div class="card">
-      <h3>Midela Representaciones</h3>
-      <p>Sitio web B2B con enfoque en claridad de productos.</p>
-      <a href="/proyectos/MidelaR.html" class="btn">Visitar</a>
-    </div>
-    <div class="card">
-      <h3>Generador de Contraseñas</h3>
-      <p>App Django para crear contraseñas seguras.</p>
-      <a href="https://ikerleandrore.pythonanywhere.com" target="_blank" class="btn">Ver app</a>
-    </div>
-  </div>
+  <!-- Tecnologías -->
+  <section>
+    <h2>🛠️ Tecnologías Utilizadas</h2>
+    <p>
+      HTML, CSS, JavaScript, Airtable, Make, Telegram Bots, PDF Maker
+    </p>
+  </section>
 
-  <h3 style="color:#00fff0; text-align:center; margin-top:2rem;">📊 Data & Scripts</h3>
-  <div class="grid">
-    <div class="card">
-      <h3>Smart Sync Hub</h3>
-      <p>Centralización de datos entre formularios, Notion y CRM.</p>
-      <a href="/proyectos/SmartSyncHub.html" class="btn">Ver demo</a>
-    </div>
-    <div class="card">
-      <h3>Scripts Python</h3>
-      <p>Scraping, automatización y utilidades en GitHub.</p>
-      <a href="https://github.com/Leandro-Resendiz?tab=repositories" target="_blank" class="btn">Ver GitHub</a>
-    </div>
-  </div>
-</section>
-
-  <section id="proceso">
-    <h2>Mi proceso de trabajo</h2>
-    <div class="grid">
-      <div class="card">🔍 1. Análisis de necesidades</div>
-      <div class="card">🧠 2. Diseño del flujo óptimo</div>
-      <div class="card">🤖 3. Desarrollo y pruebas</div>
-      <div class="card">🚀 4. Implementación final</div>
+  <!-- Demo interactiva -->
+  <section>
+    <h2>🧪 Demo Funcional</h2>
+    <p>Puedes probar Assignia desde aquí:</p>
+    <iframe class="demo" src="https://dapper-bubblegum-d1921b.netlify.app/dashboard" title="Demo Assignia"></iframe>
+    <div style="text-align:center;">
+      <a href="/Docs/Manual General de Usuario - Assignia.pdf" class="btn" target="_blank">Ver Manual PDF</a>
+      <a href="https://dapper-bubblegum-d1921b.netlify.app/dashboard" class="btn" target="_blank">Ir al sitio</a>
     </div>
   </section>
 
-  <section id="porque-yo">
-    <h2>¿Por qué elegirme?</h2>
-    <div class="grid">
-      <div class="card">⚡ Integro tecnología con visión de negocio</div>
-      <div class="card">🤝 Comunicación clara y soluciones prácticas</div>
-      <div class="card">🚀 Disponibilidad inmediata para proyectos o empleos</div>
-      <div class="card">🧠 Creatividad + lógica para resolver problemas</div>
-    </div>
-  </section>
-
-  <section id="contacto">
-    <h2>Contáctame</h2>
-    <p style="text-align:center;">📩 Escríbeme a <a href="mailto:ikerleandrore@gmail.com" style="color:#00fff0;">ikerleandrore@gmail.com</a></p>
-    <p style="text-align:center;">💬 WhatsApp: <a href="https://wa.me/5215614423799" style="color:#00fff0;">5614423799</a></p>
-    <p style="text-align:center;">🌐 GitHub: <a href="https://github.com/Leandro-Resendiz?tab=repositories" style="color:#00fff0;" target="_blank">Ver repositorios</a></p>
+  <!-- CTA -->
+  <section style="text-align: center;">
+    <a href="#" id="volver" class="btn">Volver al Portafolio</a>
   </section>
 
   <footer>
-    <p>&copy; 2025 Iker Leandro Reséndiz · Consultoría TIC & Desarrollo Web</p>
+    &copy; 2025 Iker Leandro Reséndiz · Assignia
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    });
+    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+
+    document.getElementById('volver').addEventListener('click', e => {
+      e.preventDefault();
+      if (document.referrer && document.referrer.startsWith(window.location.origin)) {
+        window.history.back();
+      } else {
+        window.location.href = "../index.html";
+      }
+    });
+  </script>
+
 </body>
 
 </html>
+
 
 
 
